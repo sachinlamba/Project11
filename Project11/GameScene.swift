@@ -38,6 +38,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.locationInNode(self)
             let ball = SKSpriteNode(imageNamed: "ballRed")
             ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2.0)
+            //passing collision info
+            ball.physicsBody!.contactTestBitMask = ball.physicsBody!.collisionBitMask
             
             ball.physicsBody!.restitution = 0.4
             ball.position = location
@@ -54,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let bouncher = SKSpriteNode(imageNamed: "bouncer")
         bouncher.position = position
         bouncher.physicsBody = SKPhysicsBody(circleOfRadius: bouncher.size.width/2.0)
+        bouncher.physicsBody!.contactTestBitMask = bouncher.physicsBody!.collisionBitMask
         bouncher.physicsBody!.dynamic = false
         addChild(bouncher)
     }
