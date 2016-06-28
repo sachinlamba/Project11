@@ -42,6 +42,7 @@
 		BB5AB4F21D224CB600306637 /* slotGlowGood.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5AB4D61D224CB600306637 /* slotGlowGood.png */; };
 		BB5AB4F31D224CB600306637 /* slotGlowGood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5AB4D71D224CB600306637 /* slotGlowGood@2x.png */; };
 		BB5AB4F41D224CB600306637 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5AB4D81D224CB600306637 /* spark.png */; };
+		BB5AB4F61D2283F100306637 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AB4F51D2283F100306637 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		BB5AB4D61D224CB600306637 /* slotGlowGood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slotGlowGood.png; sourceTree = "<group>"; };
 		BB5AB4D71D224CB600306637 /* slotGlowGood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slotGlowGood@2x.png"; sourceTree = "<group>"; };
 		BB5AB4D81D224CB600306637 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		BB5AB4F51D2283F100306637 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				BB5AB4B31D224ABF00306637 /* LaunchScreen.storyboard */,
 				BB5AB4BC1D224CB600306637 /* Content */,
 				BB5AB4B61D224ABF00306637 /* Info.plist */,
+				BB5AB4F51D2283F100306637 /* Helper.swift */,
 			);
 			path = Project11;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				BB5AB4AB1D224ABE00306637 /* GameScene.swift in Sources */,
 				BB5AB4AD1D224ABF00306637 /* GameViewController.swift in Sources */,
 				BB5AB4A71D224ABE00306637 /* AppDelegate.swift in Sources */,
+				BB5AB4F61D2283F100306637 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
