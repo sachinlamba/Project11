@@ -89,6 +89,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         slotGlow.runAction(spinForever)
     }
     
+    func collisionBetweenBall(ball: SKNode, object: SKNode) {
+        if object.name == "good" {
+            destroyBall(ball)
+        } else if object.name == "bad" {
+            destroyBall(ball)
+        }
+    }
+    
+    func destroyBall(ball: SKNode) {
+        ball.removeFromParent()
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        if contact.bodyA.node!.name == "ball" {
+            collisionBetweenBall(contact.bodyA.node!, object: contact.bodyB.node!)
+        } else if contact.bodyB.node!.name == "ball" {
+            collisionBetweenBall(contact.bodyB.node!, object: contact.bodyA.node!)
+        }
+    }
+    
+    
     
     
 }
