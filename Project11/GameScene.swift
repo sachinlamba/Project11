@@ -73,7 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if objects.contains(editLabel) {
                 editingMode = !editingMode
             } else {
-                if editingMode {
+                if editingMode && !(nodeAtPoint(location).name == "box"){
                     let size = CGSize(width: GKRandomDistribution(lowestValue: 16,highestValue: 128).nextInt(), height: 16)
                     let box = SKSpriteNode(color: RandomColor(), size: size)
                     box.zRotation = RandomCGFloat(min: 0, max: 3)
@@ -81,11 +81,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     box.physicsBody = SKPhysicsBody(rectangleOfSize: box.size)
                     box.physicsBody!.dynamic = false
-                    
+                    box.name = "box"
                     addChild(box)
                 }
+                else  if nodeAtPoint(location).name == "box" {
+                
+                            nodeAtPoint(location).removeFromParent()
+                }
                 else {
-                    
                     let ball = SKSpriteNode(imageNamed: "ballRed")
                     ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2.0)
                     //passing collision info
